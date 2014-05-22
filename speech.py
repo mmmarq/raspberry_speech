@@ -3,7 +3,6 @@
 
 import re
 from optparse import OptionParser
-#from subprocess import Popen, PIPE, call
 import subprocess
 
 BASE_URL="http://translate.google.com/translate_tts?tl=pt&q="
@@ -14,7 +13,6 @@ AUDIO_FILES=[]
 
 def parse_phrase(phrase):
    temp = phrase.split(" ")
-   #size = len(temp)
    result = []
    out = ""
    
@@ -62,14 +60,6 @@ def main():
    #print command
    subprocess.call(command)
 
-   #mycount = 0
-   #while (mycount < FILE_COUNT):
-
-      #command = ["/usr/bin/mplayer","-ao","alsa","-really-quiet","-noconsolecontrols","/home/pi/code/raspberry_speech/"+FILE_PREFIX+str(mycount)+FILE_SUFFIX]
-      #command = [PLAYER,"/home/pi/code/raspberry_speech/"+FILE_PREFIX+str(mycount)+FILE_SUFFIX]
-      #print command
-      #subprocess.call(command)
-      #mycount += 1
 
 if __name__ == '__main__':
    main()
